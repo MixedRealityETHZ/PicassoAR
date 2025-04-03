@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload to {{ path_type.capitalize() }}</title>
+    <style>
+        #preview {
+            display: none;
+            margin-top: 10px;
+            max-width: 100%;
+            max-height: 300px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <h1>Upload Image to {{ path_type.capitalize() }}</h1>
+    <form action="/images/{{ path_type }}" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept="image/*" id="fileInput" required>
+        <br>
+        <img id="preview" alt="Image Preview">
+        <br>
+        <button type="submit">Upload</button>
+    </form>
+    <a href="/">Go Back</a>
+
+    <script>
+        document.getElementById('fileInput').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            const preview = document.getElementById('preview');
+            
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    preview.src = e.target.result;
+                    preview.style.display = 'block';
+                }
+                reader.readAsDataURL(file);
+            } else {
+                preview.src = '';
+                preview.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

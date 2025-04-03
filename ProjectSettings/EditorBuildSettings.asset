@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 0
+    path: Assets/Scenes/SampleScene.unity
+    guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 0
+    path: Assets/MRScene.unity
+    guid: 54229e37834e24e20b0914f9e09bb06a
+  - enabled: 1
+    path: Assets/ImageSelection.unity
+    guid: a677a2d04598d4ae885125a70b37bdb5
+  - enabled: 0
+    path: Assets/TestScene.unity
+    guid: f08346951a8694a869431328f6cf8137
+  m_configObjects:
+    com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: 753e756950c5f445896b1545f9190176,
+      type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 71420cff6317e454f897ecac35a906ea,
+      type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: be5a49c491f76417aa927a31f7de9f60,
+      type: 2}
+    xr.sdk.mock-hmd.settings: {fileID: 11400000, guid: 3b47c725df29746a6a334816733e389d,
+      type: 2}
